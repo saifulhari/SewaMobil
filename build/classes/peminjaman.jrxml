@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="b508e4f8-d4aa-4754-9e7e-1fcc242d7308">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from peminjaman]]>
+	</queryString>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_hp" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nm_mobil" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lm_penyewaan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="plt_nomor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="uang_bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="uang_kembali" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="822" splitType="Stretch">
+			<image vAlign="Bottom">
+				<reportElement positionType="Float" mode="Opaque" x="0" y="313" width="85" height="409" backcolor="#000000" uuid="90071661-5294-49b2-b6e9-15f5d15b7d31"/>
+				<imageExpression><![CDATA["silhouette.jpg"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement positionType="Float" x="-20" y="313" width="20" height="409" backcolor="#000000" uuid="ed9dc901-e5d2-4a61-ac1e-175d3c03811f"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="722" width="105" height="100" forecolor="#666666" backcolor="#666666" uuid="d0feb48a-1bb9-4d6a-b743-a77ce363191b"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="0" width="104" height="73" forecolor="#000000" uuid="01af4371-31cc-4658-b54d-88cc0feb7e1b"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="58" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="0" y="77" width="104" height="20" forecolor="#000000" uuid="58a2e245-4f8c-4995-8a7c-b2cbeeae68e3"/>
+					<box leftPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement mode="Transparent" x="42" y="73" width="20" height="1" uuid="303159ac-2ace-4cbd-94a3-31de216be59d"/>
+				</line>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="152" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="-45" y="0" width="555" height="115" uuid="1310bfb8-e6a0-447f-b205-11b9a1cbd5ce"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Bodoni Bk BT" size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[RENTAL MOBIL IPUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="234" y="105" width="321" height="37" uuid="01e78ada-5103-4908-ac53-cad72c80dc7e"/>
+				<textElement textAlignment="Right">
+					<font fontName="DFKaiSho-SB" size="26"/>
+				</textElement>
+				<text><![CDATA[INSYAALLAH AMAN...]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="97" y="5" width="458" height="20" backcolor="#666666" uuid="74eda1e4-8f37-43d5-894f-fca256641e8b"/>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="50" height="15" uuid="0e5e2bc3-d356-4b21-938c-06b5a82def03"/>
+					<text><![CDATA[nama]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="50" y="0" width="50" height="15" uuid="1a976b4b-0369-49eb-b062-e5cf6ee7fd38"/>
+					<text><![CDATA[alamat]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="100" y="0" width="50" height="15" uuid="ab4f644b-0728-492e-b600-608060b384b3"/>
+					<text><![CDATA[no_hp]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="150" y="0" width="50" height="15" uuid="447e02c7-4095-478a-981f-054cd8547a06"/>
+					<text><![CDATA[nm_mobil]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="200" y="0" width="50" height="15" uuid="17cf37bd-bc22-48d2-a445-d1618e389528"/>
+					<text><![CDATA[lm_penyewaan]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="250" y="0" width="50" height="15" uuid="8632ad24-fc1c-4651-82ca-0911ca503eb6"/>
+					<text><![CDATA[plt_nomor]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="300" y="0" width="50" height="15" uuid="2f61faef-f1a3-4778-9177-2484a79019d4"/>
+					<text><![CDATA[harga]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="350" y="0" width="50" height="15" uuid="a8a5ed08-2eeb-4083-a104-f76da18770a8"/>
+					<text><![CDATA[uang_bayar]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="400" y="0" width="50" height="15" uuid="ffb38eec-a81c-44c6-b0c5-638bf2acd0d1"/>
+					<text><![CDATA[uang_kembali]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="66" splitType="Stretch">
+			<frame>
+				<reportElement x="97" y="1" width="458" height="15" uuid="6ef4413a-aedc-4d59-b979-034f570eef71"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="50" height="15" uuid="5bdeef3c-c532-487d-8633-a465d51327fe"/>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="50" y="0" width="50" height="15" uuid="99a275d4-94c5-49b0-bf36-0fb73e660938"/>
+					<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="100" y="0" width="50" height="15" uuid="e769aec9-cb2a-4860-8e0e-5f57fa10e4bd"/>
+					<textFieldExpression><![CDATA[$F{no_hp}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="150" y="0" width="50" height="15" uuid="51a5ba3a-418d-4378-a98a-e26585b8a4dc"/>
+					<textFieldExpression><![CDATA[$F{nm_mobil}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="200" y="0" width="50" height="15" uuid="0c47b433-5041-4cce-8d52-d6fb8c951e6f"/>
+					<textFieldExpression><![CDATA[$F{lm_penyewaan}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="250" y="0" width="50" height="15" uuid="8320e6a3-e5c2-4826-b7a1-1df290a3c6df"/>
+					<textFieldExpression><![CDATA[$F{plt_nomor}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="300" y="0" width="50" height="15" uuid="94682dba-3e75-4ba3-a7e6-1d00815e0fc8"/>
+					<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="350" y="0" width="50" height="15" uuid="4a26bcdb-f8b8-408c-9029-4e5661d37ec3"/>
+					<textFieldExpression><![CDATA[$F{uang_bayar}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="400" y="0" width="50" height="15" uuid="258c21cc-df05-4ffe-9560-f01d725cc42f"/>
+					<textFieldExpression><![CDATA[$F{uang_kembali}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="458" height="1" uuid="b836ceba-54f5-43a5-8a36-f807afc8a088"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="100" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="424" y="0" width="131" height="20" forecolor="#000000" uuid="24a0f1f1-acd8-44cc-a648-4146e9d0d717"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="96" y="0" width="267" height="20" forecolor="#000000" uuid="315d7e5b-5e9c-4342-9f5f-765ef79c2c45"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Silhouette Title Report]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
