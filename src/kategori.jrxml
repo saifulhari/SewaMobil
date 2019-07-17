@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="b85bd38e-c899-4e76-a944-869d04013552">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<queryString language="SQL">
+		<![CDATA[select * from kategori]]>
+	</queryString>
+	<field name="nm_mobil" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kd_mobil" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="spesifikasi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="plt_nomor" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="thn_pengeluaran" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="822" splitType="Stretch">
+			<image vAlign="Bottom">
+				<reportElement positionType="Float" mode="Opaque" x="0" y="313" width="85" height="409" backcolor="#000000" uuid="e2eec61f-5cc7-4548-8d7f-ef8335837149"/>
+				<imageExpression><![CDATA["silhouette.jpg"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement positionType="Float" x="-20" y="313" width="20" height="409" backcolor="#000000" uuid="5da5dddd-560f-4118-b128-e3817ca4254d"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="722" width="105" height="100" forecolor="#666666" backcolor="#666666" uuid="51eb1aa8-db0b-4bbb-b010-d3c75e864751"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textField isBlankWhenNull="true">
+					<reportElement style="Column header" x="0" y="0" width="104" height="73" forecolor="#000000" uuid="1c7fc992-dae6-499c-b247-509a7ab9eb1f"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="58" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="0" y="77" width="104" height="20" forecolor="#000000" uuid="dd36aeb8-d972-46ad-a6f1-a21e291798bd"/>
+					<box leftPadding="4" rightPadding="4"/>
+					<textElement textAlignment="Center">
+						<font size="16" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement mode="Transparent" x="42" y="73" width="20" height="1" uuid="8dedf014-daf8-4c0c-b35f-d63a9f7fa12d"/>
+				</line>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="152" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="-94" y="0" width="649" height="115" uuid="f09df548-fae7-4de4-92e1-3aa6b70308fc"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Bookman Old Style" size="54" isBold="false" pdfFontName="Helvetica"/>
+				</textElement>
+				<text><![CDATA[RENTAL MOBIL IPUL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="SubTitle" x="234" y="115" width="321" height="37" uuid="7c5482a0-5f57-4c69-bdc1-3cf4d56f2e77"/>
+				<textElement textAlignment="Right">
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[INSYAALLAH AMAN...]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="97" y="5" width="458" height="20" backcolor="#666666" uuid="5ca3ae53-8cd3-4301-bd99-73747cede575"/>
+				<staticText>
+					<reportElement style="Column header" x="0" y="0" width="91" height="15" uuid="cfbbfb1e-bd80-44a6-8f72-0cffebdc48d5"/>
+					<text><![CDATA[nm_mobil]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="91" y="0" width="91" height="15" uuid="6ca04f39-ed79-4cdb-aebc-ee48c9280426"/>
+					<text><![CDATA[kd_mobil]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="182" y="0" width="91" height="15" uuid="522eed77-9a64-4a7b-8c3c-ad433164310e"/>
+					<text><![CDATA[spesifikasi]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="273" y="0" width="91" height="15" uuid="9de27fec-554a-44e4-82bb-aabbc3499d7f"/>
+					<text><![CDATA[plt_nomor]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="Column header" x="364" y="0" width="91" height="15" uuid="778eeef3-a2d5-4ba1-8dee-32c19c3ba1c9"/>
+					<text><![CDATA[thn_pengeluaran]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<frame>
+				<reportElement x="97" y="1" width="458" height="15" uuid="20212d00-4717-465f-ab97-c2dd14bc3d82"/>
+				<textField>
+					<reportElement style="Detail" x="0" y="0" width="91" height="15" uuid="179d027c-e342-4451-beba-1295f471d351"/>
+					<textFieldExpression><![CDATA[$F{nm_mobil}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="91" y="0" width="91" height="15" uuid="653aa5e7-81e5-476f-b8c0-82cfab8fb632"/>
+					<textFieldExpression><![CDATA[$F{kd_mobil}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="182" y="0" width="91" height="15" uuid="d73b944e-3a90-4f6e-a7dc-aef008ad3799"/>
+					<textFieldExpression><![CDATA[$F{spesifikasi}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="273" y="0" width="91" height="15" uuid="3af62a61-3382-4d8b-8ce1-8a362cfc0e30"/>
+					<textFieldExpression><![CDATA[$F{plt_nomor}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Detail" x="364" y="0" width="91" height="15" uuid="52a82392-6501-4a99-a2a6-98afa3994a38"/>
+					<textFieldExpression><![CDATA[$F{thn_pengeluaran}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="97" y="16" width="458" height="1" uuid="b2b6f837-08be-48d3-b478-50934c2a8731"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="100" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="424" y="0" width="131" height="20" forecolor="#000000" uuid="30868e02-6bcb-45da-ab1c-cc47a5834641"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="Column header" x="96" y="0" width="267" height="20" forecolor="#000000" uuid="0244152d-b683-43ee-a9b7-f263d0d3a8d4"/>
+				<textElement>
+					<font size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Silhouette Title Report]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
